@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Active: 1
   parameters:
     iterations: 2
-    blurRadius: 0
+    blurRadius: 0.58
     downSample: 4
   blitShader: {fileID: 4800000, guid: bf41352f03e74bdebf1fff4cee010b6e, type: 3}
   settings:
@@ -250,6 +250,38 @@ MonoBehaviour:
         serializedVersion: 2
         m_Bits: 0
       lightModeTags: []
+--- !u!114 &-2496141402319228511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a84d189f6a4a8cad91d6760a7054f5, type: 3}
+  m_Name: DepthNormalTextureOutlineRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  parameters:
+    edgesOnly: 0
+    edgeColor: {r: 1, g: 0, b: 0, a: 1}
+    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+    sampleDistance: 1.35
+    sensitivityDepth: 0.91
+    sensitivityNormals: 1.52
+  blitShader: {fileID: 4800000, guid: 8a4e938f9cc8441dbfddd82a990af29f, type: 3}
+  settings:
+    commandBufferTag: URP Post Processing
+    profilerTag: DepthNormalTextureOutlinePass
+    renderPassEvent: 550
+    renderPassInput: 6
+    filterSettings:
+      renderQueueType: 0
+      layerMask:
+        serializedVersion: 2
+        m_Bits: 0
+      lightModeTags: []
 --- !u!114 &-2217893829062274145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,7 +364,8 @@ MonoBehaviour:
   - {fileID: 4594298283595443927}
   - {fileID: -8003937570536922592}
   - {fileID: -6065425122675279039}
-  m_RendererFeatureMap: d7aee481f239c23f2062beaf2f4dec9041bb35a7fc47d3ab
+  - {fileID: -2496141402319228511}
+  m_RendererFeatureMap: d7aee481f239c23f2062beaf2f4dec9041bb35a7fc47d3aba1f19da59eec5bdd
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
